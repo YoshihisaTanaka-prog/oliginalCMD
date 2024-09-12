@@ -1,3 +1,7 @@
 @echo off
 @REM enter the command below.
-dir %1 /B
+IF "%1"=="" (
+  dir . /B
+) ELSE (
+  dir %1 /B
+)
